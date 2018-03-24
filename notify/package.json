@@ -1,0 +1,17 @@
+{
+    "name": "notify",
+    "version": "0.0.1",
+    "description": "node notifition center",
+    "main": "app.js",
+    "dependencies": {
+        "node-notifier": "^5.1.2",
+        "jpush-sdk": "^3.4.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node test.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "mj",
+    "license": "MIT"
+}

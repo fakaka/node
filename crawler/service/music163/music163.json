@@ -1,0 +1,1284 @@
+{
+    "Playlist": {
+        "request": false,
+        "params": {
+            "id": "3778678"
+        },
+        "data": [
+            {
+                "id": 526464293,
+                "songName": "空空如也 ",
+                "songAlias": [],
+                "singerName": "任然",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "空空如也",
+                "albumTns": [],
+                "privilege": {
+                    "id": 526464293,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 486218073,
+                "songName": "BINGBIAN病变",
+                "songAlias": [],
+                "singerName": "Cubi / Aydo$ / BRGang",
+                "singerAlias": [
+                    [],
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    [],
+                    []
+                ],
+                "albumName": "BINGBIAN病变",
+                "albumTns": [],
+                "privilege": {
+                    "id": 486218073,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 2,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 523251118,
+                "songName": "说散就散",
+                "songAlias": [
+                    "电影《前任3：再见前任》主题曲"
+                ],
+                "singerName": "袁娅维",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "说散就散",
+                "albumTns": [],
+                "privilege": {
+                    "id": 523251118,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 812400,
+                "songName": "PLANET",
+                "songAlias": [],
+                "singerName": "ラムジ",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "3ラムジ",
+                "albumTns": [
+                    "3 Lambsey"
+                ],
+                "privilege": {
+                    "id": 812400,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 1,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 504017347,
+                "songName": "Just Like This (Original Mix)",
+                "songAlias": [],
+                "singerName": "Deepmaniak",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Just Like This",
+                "albumTns": [],
+                "privilege": {
+                    "id": 504017347,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 16,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 513791211,
+                "songName": "广东十年爱情故事",
+                "songAlias": [],
+                "singerName": "广东雨神",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "广东十年爱情故事",
+                "albumTns": [],
+                "privilege": {
+                    "id": 513791211,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 461347998,
+                "songName": "Something Just Like This",
+                "songAlias": [],
+                "singerName": "The Chainsmokers / Coldplay",
+                "singerAlias": [
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    []
+                ],
+                "albumName": "Something Just Like This",
+                "albumTns": [],
+                "privilege": {
+                    "id": 461347998,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 526307800,
+                "songName": "123我爱你",
+                "songAlias": [],
+                "singerName": "新乐尘符",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "123我爱你",
+                "albumTns": [],
+                "privilege": {
+                    "id": 526307800,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 531295576,
+                "songName": "最美的期待",
+                "songAlias": [],
+                "singerName": "周笔畅",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "最美的期待",
+                "albumTns": [],
+                "privilege": {
+                    "id": 531295576,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 514761281,
+                "songName": "白羊",
+                "songAlias": [],
+                "singerName": "徐秉龙 / 沈以诚",
+                "singerAlias": [
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    []
+                ],
+                "albumName": "白羊",
+                "albumTns": [],
+                "privilege": {
+                    "id": 514761281,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 2,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 452986458,
+                "songName": "红昭愿",
+                "songAlias": [],
+                "singerName": "音阙诗听",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "红昭愿",
+                "albumTns": [],
+                "privilege": {
+                    "id": 452986458,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 2,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 531051217,
+                "songName": "等你下课 (with 杨瑞代)",
+                "songAlias": [],
+                "singerName": "周杰伦",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "等你下课",
+                "albumTns": [],
+                "privilege": {
+                    "id": 531051217,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 128000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 4,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 483671599,
+                "songName": "追光者",
+                "songAlias": [
+                    "电视剧《夏至未至》插曲"
+                ],
+                "singerName": "岑宁儿",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "夏至未至 影视原声带",
+                "albumTns": [],
+                "privilege": {
+                    "id": 483671599,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 108478,
+                "songName": "醉赤壁",
+                "songAlias": [
+                    "网游《赤壁Online》主题曲"
+                ],
+                "singerName": "林俊杰",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "JJ陆",
+                "albumTns": [],
+                "privilege": {
+                    "id": 108478,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 536570080,
+                "songName": "少年中国",
+                "songAlias": [],
+                "singerName": "HITA / 小爱的妈 / 清弄 / 许多葵 / 橙翼 / 陈鹏杰 / 奇然 / 阿册大魔王 / 萧忆情Alex / 排骨教主 / 音频怪物 / 李常超 (Lao乾妈) / 绯村柯北 / 上古呐 / 银临 / 不才 / smile_小千 / 阿杰729 / 流浪的蛙蛙 / 贰婶 / 慕斯の小乖 / 猫饭 / 灰老板 / 午年_5ive / 孙翔",
+                "singerAlias": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ],
+                "albumName": "少年中国",
+                "albumTns": [],
+                "privilege": {
+                    "id": 536570080,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 451703096,
+                "songName": "Shape of You",
+                "songAlias": [],
+                "singerName": "Ed Sheeran",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Shape Of You",
+                "albumTns": [],
+                "privilege": {
+                    "id": 451703096,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 440208643,
+                "songName": "Psycho (Pt. 2)",
+                "songAlias": [],
+                "singerName": "Russ",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Psycho (Pt. 2)",
+                "albumTns": [],
+                "privilege": {
+                    "id": 440208643,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 492145159,
+                "songName": "Superstar",
+                "songAlias": [],
+                "singerName": "Beatrich",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Superstar",
+                "albumTns": [],
+                "privilege": {
+                    "id": 492145159,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 37653063,
+                "songName": "Please Don't Go",
+                "songAlias": [],
+                "singerName": "Joel Adams",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Please Don't Go",
+                "albumTns": [],
+                "privilege": {
+                    "id": 37653063,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 192000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 472361096,
+                "songName": "Despacito (Remix)",
+                "songAlias": [],
+                "singerName": "Luis Fonsi / Daddy Yankee / Justin Bieber",
+                "singerAlias": [
+                    [],
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    [],
+                    []
+                ],
+                "albumName": "Despacito (Remix)",
+                "albumTns": [],
+                "privilege": {
+                    "id": 472361096,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 465920905,
+                "songName": "全部都是你",
+                "songAlias": [],
+                "singerName": "Dragon Pig / CNBALLER / CLOUD WANG",
+                "singerAlias": [
+                    [],
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    [],
+                    []
+                ],
+                "albumName": "全部都是你",
+                "albumTns": [],
+                "privilege": {
+                    "id": 465920905,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 496870798,
+                "songName": "带你去旅行",
+                "songAlias": [],
+                "singerName": "校长",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "带你去旅行",
+                "albumTns": [],
+                "privilege": {
+                    "id": 496870798,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 33035611,
+                "songName": "Time",
+                "songAlias": [],
+                "singerName": "MKJ",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Time",
+                "albumTns": [],
+                "privilege": {
+                    "id": 33035611,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 494865824,
+                "songName": "Havana",
+                "songAlias": [],
+                "singerName": "Camila Cabello / Young Thug",
+                "singerAlias": [
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    []
+                ],
+                "albumName": "Havana",
+                "albumTns": [],
+                "privilege": {
+                    "id": 494865824,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 480580003,
+                "songName": "再也没有",
+                "songAlias": [],
+                "singerName": "Ryan.B / AY楊佬叁",
+                "singerAlias": [
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    []
+                ],
+                "albumName": "再也没有",
+                "albumTns": [],
+                "privilege": {
+                    "id": 480580003,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 34229976,
+                "songName": "Panama",
+                "songAlias": [],
+                "singerName": "Matteo",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "Panama",
+                "albumTns": [],
+                "privilege": {
+                    "id": 34229976,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 320000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": false,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 448393515,
+                "songName": "尽头",
+                "songAlias": [],
+                "singerName": "赵方婧",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "音阙诗听",
+                "albumTns": [],
+                "privilege": {
+                    "id": 448393515,
+                    "fee": 8,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 128000,
+                    "dl": 0,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 128000,
+                    "toast": false,
+                    "flag": 2,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 479574796,
+                "songName": "文爱",
+                "songAlias": [],
+                "singerName": "CG",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "文爱",
+                "albumTns": [],
+                "privilege": {
+                    "id": 479574796,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 432506345,
+                "songName": "童话镇",
+                "songAlias": [],
+                "singerName": "陈一发儿",
+                "singerAlias": [
+                    []
+                ],
+                "singerTns": [
+                    []
+                ],
+                "albumName": "童话镇",
+                "albumTns": [],
+                "privilege": {
+                    "id": 432506345,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            },
+            {
+                "id": 418602088,
+                "songName": "Nevada",
+                "songAlias": [],
+                "singerName": "Vicetone / Cozi Zuehlsdorff",
+                "singerAlias": [
+                    [],
+                    []
+                ],
+                "singerTns": [
+                    [],
+                    []
+                ],
+                "albumName": "Nevada",
+                "albumTns": [],
+                "privilege": {
+                    "id": 418602088,
+                    "fee": 0,
+                    "payed": 0,
+                    "st": 0,
+                    "pl": 320000,
+                    "dl": 320000,
+                    "sp": 7,
+                    "cp": 1,
+                    "subp": 1,
+                    "cs": false,
+                    "maxbr": 999000,
+                    "fl": 320000,
+                    "toast": false,
+                    "flag": 0,
+                    "preSell": false
+                },
+                "ftype": 0,
+                "level": 0,
+                "isSQ": true,
+                "priMode": {
+                    "msg": "",
+                    "modal": 0
+                }
+            }
+        ],
+        "info": {
+            "id": 3778678,
+            "creator": {
+                "defaultAvatar": false,
+                "province": 110000,
+                "authStatus": 1,
+                "followed": false,
+                "avatarUrl": "http://p1.music.126.net/QWMV-Ru_6149AKe0mCBXKg==/1420569024374784.jpg",
+                "accountStatus": 0,
+                "gender": 1,
+                "city": 110101,
+                "birthday": -2209017600000,
+                "userId": 1,
+                "userType": 2,
+                "nickname": "网易云音乐",
+                "signature": "欢迎使用网易云音乐，有任何问题可以联系@云音乐客服， 我们会尽快答复。有关独立音乐人和独立厂牌请站内私信@原创君，DJ入驻联系邮箱： yunmusic@163.com",
+                "description": "网易云音乐官方账号",
+                "detailDescription": "网易云音乐官方账号",
+                "avatarImgId": 1420569024374784,
+                "backgroundImgId": 2002210674180202,
+                "backgroundUrl": "http://p1.music.126.net/pmHS4fcQtcNEGewNb5HRhg==/2002210674180202.jpg",
+                "authority": 3,
+                "mutual": false,
+                "expertTags": null,
+                "experts": null,
+                "djStatus": 10,
+                "vipType": 11,
+                "remarkName": null,
+                "avatarImgIdStr": "1420569024374784",
+                "backgroundImgIdStr": "2002210674180202"
+            },
+            "description": "云音乐热歌榜：云音乐用户一周内收听所有线上歌曲 官方TOP排行榜，每周四更新。",
+            "playCount": 1604112896,
+            "highQuality": false,
+            "coverImgId": "18708190348409091",
+            "coverImgUrl": "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg",
+            "tags": [],
+            "name": "云音乐热歌榜",
+            "createTime": 1378721406014,
+            "_count": "16亿"
+        },
+        "msg": "",
+        "_simp": {
+            "title": "云音乐热歌榜 - 歌单 - 网易云音乐",
+            "keywords": "云音乐热歌榜，网易云音乐",
+            "description": "云音乐热歌榜：云音乐用户一周内收听所有线上歌曲 官方TOP排行榜，每周四更新。",
+            "pcUrl": "/playlist?id=3778678"
+        },
+        "_ziyuan": {
+            "title": "云音乐热歌榜",
+            "images": "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg",
+            "description": "云音乐热歌榜：云音乐用户一周内收听所有线上歌曲 官方TOP排行榜，每周四更新。",
+            "pubDate": "2013-09-09T18:10:06"
+        },
+        "loaded": true,
+        "showfull": false
+    }
+};

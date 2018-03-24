@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic SSE Example</title>
+</head>
+
+<body>
+    <pre id="x">Initializing...</pre>
+
+    <script>
+        var sse = new EventSource("http://localhost:3000/sse")
+
+        sse.addEventListener("open", function (event) {
+            console.log('sse is open')
+        }, false)
+
+        sse.addEventListener("message", (event) => {
+            document.getElementById("x").innerHTML += "\n" + event.data
+        }, false)
+
+        sse.addEventListener("error", function (event) {
+            console.log('connection is error, close it !')
+            sse.close()
+        }, false)
+    </script>
+</body>
+
+</html>

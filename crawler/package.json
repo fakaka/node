@@ -1,0 +1,20 @@
+{
+    "name": "数据收集",
+    "version": "0.0.1",
+    "author": "mj",
+    "description": "The nodejs app!",
+    "dependencies": {
+        "request": "*",
+        "querystring": "*",
+        "mysql": "*",
+        "redis": "*",
+        "mongoose": "*",
+        "bluebird": "*",
+        "fs": "*",
+        "node-schedule": "1.2.1",
+        "nodemailer": "*",
+        "lodash": "^4.17.4",
+        "qiniu": "^6.1.13",
+        "moment": "^2.18.1"
+    }
+}

@@ -1,0 +1,1 @@
+module.exports.rank = require('./bilibili').rank
