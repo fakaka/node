@@ -1,5 +1,4 @@
 var getData = require('../util/requestUtil').getData
-var cheerio = require('cheerio')
 
 const map = {
     '1': '动画',
@@ -45,9 +44,6 @@ async function getBanner(ctx, next) {
 }
 
 
-
-
-
 async function getUserVideo(ctx, next) {
     // 完整的url
     // http://space.bilibili.com/ajax/member/getSubmitVideos?mid=116683&page=1&pagesize=10
@@ -61,11 +57,28 @@ async function getUserVideo(ctx, next) {
     })
 
 }
+
 async function getUserInfo(ctx, next) {
     // 完整的url
 
     const options = {
         url: 'https://space.bilibili.com/ajax/member/GetInfo?mid=' + ctx.query.mid
+    }
+
+    await getData(options).then((res) => {
+        ctx.body = res
+    })
+
+}
+
+async function getUserSpace(ctx, next) {
+    // 完整的url
+    var data = {
+        uid: ctx.query.uid || '259333'
+    }
+
+    const options = {
+        url: 'https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?host_uid=' + data.uid
     }
 
     await getData(options).then((res) => {
@@ -164,6 +177,8 @@ function dynamic() {
 
 
 module.exports = {
-    getRank, search, getUserVideo, getUserInfo, recommend, video, getBanner
+    getRank, search,
+    getUserVideo, getUserInfo, getUserSpace,
+    recommend, video, getBanner
 }
 

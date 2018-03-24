@@ -56,6 +56,7 @@ router.get('/bilibili/search', require('./router/bilibili').search)
 router.get('/bilibili/recommend', require('./router/bilibili').recommend)
 router.get('/bilibili/video', require('./router/bilibili').video)
 router.get('/bilibili/user/info', require('./router/bilibili').getUserInfo)
+router.get('/bilibili/user/space', require('./router/bilibili').getUserSpace)
 router.get('/bilibili/user/video', require('./router/bilibili').getUserVideo)
 
 
