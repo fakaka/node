@@ -3,10 +3,10 @@ var xml2js = require('xml2js')
 
 async function spring4all(ctx, next) {
 
-    var page = ctx.request.query.page || 1
+    var pageSize = ctx.request.query.pageSize || 1
 
     const options = {
-        url: 'http://www.spring4all.com/common/articles/' + page
+        url: 'http://www.spring4all.com/common/articles/' + pageSize
     }
 
     await getData(options).then((res) => {
@@ -16,17 +16,17 @@ async function spring4all(ctx, next) {
 
 async function cnode(ctx, next) {
 
-    // page Number 页数
     // tab  String 主题分类。目前有 ask share job good
     var requestData = {
-        limit: ctx.request.query.limit || 10,
+        // 页数
+        pageSize: ctx.request.query.pageSize || 10,
         // 是否使用 md 默认 true
         mdrender: 'false',
     }
     console.log(requestData)
 
     const options = {
-        url: 'https://cnodejs.org/api/v1/topics?limit=' + requestData.limit,
+        url: 'https://cnodejs.org/api/v1/topics?limit=' + requestData.pageSize,
         body: JSON.stringify(requestData)
     }
 
@@ -37,7 +37,7 @@ async function cnode(ctx, next) {
 
 async function oschina(ctx, next) {
 
-    var pageSize = ctx.request.query.pagesize || 10
+    var pageSize = ctx.query.pagesize || 10
 
     const options = {
         url: 'https://www.oschina.net/action/api/news_list?pageSize=' + pageSize

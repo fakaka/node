@@ -3,11 +3,11 @@ var getData = require('../util/requestUtil').getData
 async function getList(ctx, next) {
     // https://m.weibo.cn/api/container/getIndex?value=3700233717&containerid=1076033700233717
     var req = ctx.request
-    
+
     let data = {
-        containerid: ctx.query.containerid || 1076033700233717,
+        uid: '107603' + ctx.query.uid || 3700233717
     }
-    let url = 'https://m.weibo.cn/api/container/getIndex?value=3700233717&containerid=' + data.containerid
+    let url = `https://m.weibo.cn/api/container/getIndex?containerid=${data.uid}`
     const options = {
         url
     }
