@@ -3,10 +3,10 @@ var xml2js = require('xml2js')
 
 async function spring4all(ctx, next) {
 
-    var pageSize = ctx.request.query.pageSize || 1
+    var page = ctx.request.query.page || 1
 
     const options = {
-        url: 'http://www.spring4all.com/common/articles/' + pageSize
+        url: 'http://www.spring4all.com/common/articles/' + page
     }
 
     await getData(options).then((res) => {
@@ -59,6 +59,7 @@ async function csdn(ctx, next) {
         ctx.body = res
     })
 }
+
 
 module.exports = {
     spring4all, cnode, oschina, csdn

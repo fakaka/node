@@ -17,10 +17,11 @@ const PORT = 3003
 //     console.log(mapping)
 // })
 
+// 设置跨域 *
 app.use(cors())
 
+// TODO 返回 api 文档
 router.get('/', (ctx, next) => {
-    console.log('hello')
     ctx.body = '欢迎使用该 api'
 })
 
@@ -73,7 +74,9 @@ router.get('/joke/juhe', require('./router/joke').juheApi)
 router.get('/ins/lyt', require('./router/ins').getLatest)
 
 // weibo
-router.get('/weibo/list', require('./router/weibo').getList)
+router.get('/weibo/list', require('./router/weibo').weiboList)
+router.get('/weibo/hot', require('./router/weibo').weiboHot)
+router.get('/weibo/like', require('./router/weibo').weiboLike)
 
 
 app.use(router.routes())
