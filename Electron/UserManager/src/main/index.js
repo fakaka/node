@@ -44,6 +44,12 @@ app.on('activate', () => {
   }
 })
 
+new Notification({
+  title: 'title',
+  subtitle: 'subtitle',
+  body:'body'
+})
+
 /**
  * Auto Updater
  *

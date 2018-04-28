@@ -186,7 +186,6 @@ async function getTopArtists(ctx, next) {
 }
 
 async function getPlaylist(ctx, next) {
-    console.log('???')
     var req = ctx.request
 
     const cookie = req.get('Cookie') ? req.get('Cookie') : ''
@@ -198,7 +197,26 @@ async function getPlaylist(ctx, next) {
 
     await createWebAPIRequest(
         'music.163.com',
-        `//api/playlist/detail?id=${data.id}`,
+        `/api/playlist/detail?id=${data.id}`,
+        'POST',
+        data,
+        cookie
+    ).then((res) => {
+        console.log(res)
+        ctx.response.body = res
+    })
+}
+
+async function getBanner(ctx, next) {
+    var req = ctx.request
+
+    const cookie = req.get('Cookie') ? req.get('Cookie') : ''
+    const data = {
+    }
+
+    await createWebAPIRequest(
+        'music.163.com',
+        '/api/v2/banner/get',
         'POST',
         data,
         cookie
@@ -209,7 +227,7 @@ async function getPlaylist(ctx, next) {
 }
 
 module.exports = {
-    search,
+    search,getBanner,
     getMusicDetail, getMusicUrl, getMusicComment, getMusicLyric,
     getPlaylist,
     getTopArtists, getTopList

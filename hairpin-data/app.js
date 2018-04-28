@@ -32,6 +32,7 @@ router.get('/', (ctx, next) => {
 
 // 云音乐通用接口
 router.get('/music/search', require('./router/music').search)
+router.get('/music/banner', require('./router/music').getBanner)
 
 // 歌曲相关接口
 router.get('/music/song/url', require('./router/music').getMusicUrl)
