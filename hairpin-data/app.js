@@ -51,7 +51,7 @@ router.get('/music/top/artist', require('./router/music').getTopArtists)
 router.get('/qqmusic/toplist', require('./router/qqmusic').getTopList)
 router.get('/qqmusic/top', require('./router/qqmusic').getTop)
 
-// B站
+// B 站
 router.get('/bilibili/banner', require('./router/bilibili').getBanner)
 router.get('/bilibili/rank', require('./router/bilibili').getRank)
 router.get('/bilibili/search', require('./router/bilibili').search)
@@ -60,6 +60,7 @@ router.get('/bilibili/video', require('./router/bilibili').video)
 router.get('/bilibili/user/info', require('./router/bilibili').getUserInfo)
 router.get('/bilibili/user/space', require('./router/bilibili').getUserSpace)
 router.get('/bilibili/user/video', require('./router/bilibili').getUserVideo)
+router.get('/bilibili/user/follow', require('./router/bilibili').getUserFollow)
 
 
 // 新闻

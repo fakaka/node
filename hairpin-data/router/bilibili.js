@@ -23,7 +23,7 @@ async function getRank(ctx, next) {
         url: 'https://api.bilibili.com/x/web-interface/ranking/region?rid=' + ctx.query.rid
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
 }
@@ -35,7 +35,7 @@ async function getBanner(ctx, next) {
         url: 'https://api.bilibili.com/x/web-show/res/loc?id=142'
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         var obj = JSON.parse(res)
         if (obj.code == 0) {
             ctx.body = obj
@@ -43,19 +43,19 @@ async function getBanner(ctx, next) {
     })
 }
 
-
 async function getUserVideo(ctx, next) {
     // 完整的url
     // http://space.bilibili.com/ajax/member/getSubmitVideos?mid=116683&page=1&pagesize=10
 
     const options = {
-        url: 'http://space.bilibili.com/ajax/member/getSubmitVideos?mid=' + ctx.query.mid + '&page=1&pagesize=10'
+        url:
+            'http://space.bilibili.com/ajax/member/getSubmitVideos?page=1&pagesize=10&mid=' +
+            ctx.query.mid
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
 async function getUserInfo(ctx, next) {
@@ -65,10 +65,9 @@ async function getUserInfo(ctx, next) {
         url: 'https://space.bilibili.com/ajax/member/GetInfo?mid=' + ctx.query.mid
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
 async function getUserSpace(ctx, next) {
@@ -78,24 +77,36 @@ async function getUserSpace(ctx, next) {
     }
 
     const options = {
-        url: 'https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?host_uid=' + data.uid
+        url:
+            'https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?host_uid=' +
+            data.uid
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
+async function getUserFollow(ctx, next) {
+    // 完整的url
+
+    const options = {
+        url: 'https://api.bilibili.com/x/relation/followings?vmid=3447141'
+    }
+
+    await getData(options).then(res => {
+        ctx.body = res
+    })
+}
 
 async function search(ctx, next) {
     // 完整的url
 
     var data = {
-        "keyword": ctx.query.keyword,
-        "page": 1,
-        "pagesize": 10,
-        "search_type": "all"
+        keyword: ctx.query.keyword,
+        page: 1,
+        pagesize: 10,
+        search_type: 'all'
     }
 
     let url = 'https://search.bilibili.com/api/search'
@@ -105,17 +116,15 @@ async function search(ctx, next) {
         url
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
 async function recommend(ctx, next) {
     // 完整的url
     // https://api.bilibili.com/x/web-interface/ranking/index?day=3
-    var data = {
-    }
+    var data = {}
 
     let url = 'https://api.bilibili.com/x/web-interface/ranking/index?day=3'
 
@@ -123,22 +132,20 @@ async function recommend(ctx, next) {
         url
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
 async function video(ctx, next) {
     // 完整的url
     // https://api.bilibili.com/x/web-interface/ranking/index?day=3
     var data = {
-
-        "batch": "1",
-        "check_area": "1",
-        "id": 20793270,
-        "platform": "ios",
-        "type": "json",
+        batch: '1',
+        check_area: '1',
+        id: 20793270,
+        platform: 'ios',
+        type: 'json'
     }
 
     let url = 'http://api.bilibili.com/view?'
@@ -148,10 +155,9 @@ async function video(ctx, next) {
         url
     }
 
-    await getData(options).then((res) => {
+    await getData(options).then(res => {
         ctx.body = res
     })
-
 }
 
 function param(data) {
@@ -164,21 +170,20 @@ function param(data) {
 }
 
 function ranks(likes = [1, 3, 4, 11, 23, 129]) {
-
     for (let i = 0; i < likes.length; i++) {
         var rid = likes[i]
         getRank(rid)
     }
 }
 
-function dynamic() {
-
-}
-
-
 module.exports = {
-    getRank, search,
-    getUserVideo, getUserInfo, getUserSpace,
-    recommend, video, getBanner
+    getRank,
+    search,
+    getUserVideo,
+    getUserInfo,
+    getUserSpace,
+    getUserFollow,
+    recommend,
+    video,
+    getBanner
 }
-

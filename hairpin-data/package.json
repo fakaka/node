@@ -1,22 +1,22 @@
 {
-  "name": "hairpin-data",
-  "version": "0.0.1",
-  "description": "数据抓取",
-  "main": "index.js",
-  "scripts": {
-    "start": "cnpm i || node app.js",
-    "test": "test"
-  },
-  "author": "MJ",
-  "license": "MIT",
-  "dependencies": {
-    "koa": "^2.5.0",
-    "koa-router": "^7.4.0",
-    "koa-cors": "^0.0.16",
-    "request": "^2.83.0",
-    "big-integer": "^1.6.26",
-    "xml2js": "^0.4.19",
-    "cheerio": "^1.0.0-rc.2"
-  },
-  "devDependencies": {}
+    "name": "hairpin-data",
+    "version": "0.0.1",
+    "description": "数据抓取",
+    "main": "index.js",
+    "scripts": {
+        "start": "cnpm i || node app.js",
+        "test": "test"
+    },
+    "author": "MJ",
+    "license": "MIT",
+    "dependencies": {
+        "koa": "^2.5.0",
+        "koa-router": "^7.4.0",
+        "koa-cors": "^0.0.16",
+        "request": "^2.83.0",
+        "big-integer": "^1.6.26",
+        "xml2js": "^0.4.19",
+        "cheerio": "^1.0.0-rc.2"
+    },
+    "devDependencies": {}
 }
