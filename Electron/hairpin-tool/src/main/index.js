@@ -1,8 +1,4 @@
-import {
-    app,
-    BrowserWindow,
-    ipcMain
-} from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 
 /**
  * Set `__static` path to static files in production
@@ -15,27 +11,28 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 let mainWindow
-const winURL = process.env.NODE_ENV === 'development' ?
-    `http://localhost:9080` :
-    `file://${__dirname}/index.html`
+const winURL =
+    process.env.NODE_ENV === 'development'
+        ? `http://localhost:9081`
+        : `file://${__dirname}/index.html`
 
 function createWindow() {
     /**
      * Initial window options
      */
     mainWindow = new BrowserWindow({
-        height: 800,
-        useContentSize: true,
-        width: 1000,
         frame: false,
-        resizable: true,
+        useContentSize: true,
         skipTaskbar: false,
         transparent: false,
-        title:"小土狗音乐",
-        autoHideMenuBar:true,
-        x:0,
-        y:0
-    });
+        autoHideMenuBar: true,
+        resizable: true,
+        width: 1020,
+        height: 670,
+        minWidth: 1020,
+        minHeight: 670,
+        title: '发 卡'
+    })
 
     mainWindow.loadURL(winURL)
 
@@ -58,10 +55,10 @@ app.on('activate', () => {
     }
 })
 
-ipcMain.on('close',e=>{
+ipcMain.on('close', e => {
     mainWindow.close()
 })
-ipcMain.on('minimize',e=>{
+ipcMain.on('minimize', e => {
     mainWindow.minimize()
 })
 
