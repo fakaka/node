@@ -26,11 +26,15 @@ function createWindow() {
         skipTaskbar: false,
         transparent: false,
         autoHideMenuBar: true,
+        titleBarStyle: 'hidden',
         resizable: true,
         width: 1020,
         height: 670,
         minWidth: 1020,
         minHeight: 670,
+        // transparent: true,
+        opacity: 0.96,
+        hasShadow: true,
         title: '发 卡'
     })
 

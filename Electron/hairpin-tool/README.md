@@ -1,19 +1,15 @@
-# 土狗音乐播放器
+# 发卡工具箱
 
-> 一个基于 electron-vue 开发的音乐播放器 (持续更新中..欢迎star)
-
+> 一个基于 electron-vue 开发的个人工具
 
 
 #### 运行
 
 ``` bash
-git clone https://github.com/SmallRuralDog/electron-vue-music.git
-
-cd electron-vue-music
 
 npm install
 
-# serve with hot reload at localhost:9080
+# serve with hot reload at localhost:8090
 npm run dev
 
 # build electron application for production
@@ -25,15 +21,6 @@ npm run build
 # 网易云音乐 API
 
 网易云音乐 Node.js API service
-
-<p>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/v/NeteaseCloudMusicApi.svg" alt="Version"></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/l/NeteaseCloudMusicApi.svg" alt="License"></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/david/dev/binaryify/NeteaseCloudMusicApi.svg" alt="devDependencies" ></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/david/binaryify/NeteaseCloudMusicApi.svg" alt="devDependencies" ></a>
-<a href="https://codeclimate.com/github/Binaryify/NeteaseCloudMusicApi"><img src="https://codeclimate.com/github/Binaryify/NeteaseCloudMusicApi/badges/gpa.svg" /></a>
-</p>
-
 
 ## 环境要求
 
@@ -64,16 +51,12 @@ windows 下使用 git-bash 或者 cmder 等终端执行以下命令:
 $ set PORT=4000 && node app.js
 ```
 
+## TODO
 
-## 使用文档
-
-[文档地址](https://binaryify.github.io/NeteaseCloudMusicApi)
-
-
-# UI
-
-![](https://i.loli.net/2018/07/23/5b55923480eac.png)
-![](https://i.loli.net/2018/07/23/5b5592342f330.png)
-![](https://i.loli.net/2018/07/23/5b559233da730.png)
-![](https://i.loli.net/2018/07/23/5b5592333d294.png)
-![](https://i.loli.net/2018/07/23/5b5592337750c.png)
+- [ ] 去掉不需要的页面
+- [ ] 整理项目结构
+- [ ] 重构侧边栏
+    - [ ] 组件化
+    - [ ] 收缩
+- [ ] B 站
+    - [ ] 

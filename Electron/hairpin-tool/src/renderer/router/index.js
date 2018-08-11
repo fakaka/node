@@ -15,10 +15,16 @@ export default new Router({
                     path: 'music',
                     name: 'music',
                     component: () => import('../views/music/index.vue')
-                }, {
+                },
+                {
                     path: 'playlist-detail',
                     name: 'playlist-detail',
                     component: () => import('../views/playlist/detail')
+                },
+                {
+                    path: 'setting',
+                    name: 'setting',
+                    component: () => import('../views/setting')
                 }
             ]
         },

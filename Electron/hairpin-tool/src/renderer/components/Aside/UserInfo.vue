@@ -9,7 +9,7 @@
                 {{user.is_login?user.profile.nickname:"立即登录"}}
             </el-button>
         </div>
-        <div class="font-assist  type-icons">
+        <div class="font-assist  type-icons" v-if="user.is_login">
             <i class="iconfont icon-LV5"></i>
             <i class="iconfont icon-vip"></i>
         </div>
