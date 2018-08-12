@@ -10,14 +10,19 @@
             <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
                 <i class="btn el-icon-refresh"></i>
             </el-button>
-
             <div class="search no-drag">
-                <el-input size="mini" prefix-icon="el-icon-search" placeholder="搜索音乐、MV、歌单、用户"></el-input>
+                <el-input size="mini" prefix-icon="el-icon-search" placeholder="搜索" clearable></el-input>
             </div>
         </div>
         <div class="right">
             <el-button @click="minimize" class="no-drag" size="mini" type="text">
                 <i class="btn el-icon-minus"></i>
+            </el-button>
+            <el-button @click="close" class="no-drag hover-color" size="mini" type="text">
+                <i class="btn el-icon-message"></i>
+            </el-button>
+            <el-button @click="setting" class="no-drag hover-color" size="mini" type="text">
+                <i class="btn el-icon-setting"></i>
             </el-button>
             <el-button @click="close" class="no-drag hover-color" size="mini" type="text">
                 <i class="btn el-icon-close"></i>
@@ -32,24 +37,10 @@
         props: {
             height: {
                 type: String,
-                default: '40px'
+                default: '50px'
             }
         },
         methods: {
-            close() {
-                this.$confirm('此操作将退出土狗云音乐, 是否继续?', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
-                    type: 'warning'
-                }).then(() => {
-                    this.$electron.ipcRenderer.send('close')
-                }).catch(() => {
-
-                })
-            },
-            minimize() {
-                this.$electron.ipcRenderer.send('minimize')
-            },
             back() {
                 if (this.$route.name !== 'music') {
                     this.$router.go(-1)
@@ -60,7 +51,27 @@
             },
             refresh() {
                 this.$bus.$emit('page-refresh', this.$route.name) 
-            }
+            },
+            minimize() {
+                this.$electron.ipcRenderer.send('minimize')
+            },
+            message(){
+
+            },
+            setting(){
+                this.$router.push('setting')
+            },
+            close() {
+                this.$confirm('关闭发卡工具箱, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    this.$electron.ipcRenderer.send('close')
+                }).catch(() => {
+
+                })
+            },
         }
     }
 </script>
@@ -79,11 +90,11 @@
                 color: #31c27c;
             }
             .el-icon-refresh {
-                color: #333;
+                color: #000;
             }
             .search {
                 margin-left: 15px;
-                width: 200px;
+                width: 240px;
                 .el-input__inner {
                     border: none;
                     border-radius: 30px;

@@ -1,79 +1,5 @@
 <template>
     <el-scrollbar class="menu-view scroll-page">
-        <div class="menu-group">
-            <div class="menu-title">在线音乐</div>
-            <div class="menu-item active">
-                <router-link :to="{ name: 'music'}"
-                             tag="div">
-                    <div class="left">
-                        <i class="iconfont icon-yinle"></i>音乐
-                    </div>
-                </router-link>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-mv"></i>MV</div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-diantai"></i>个性电台</div>
-            </div>
-            <div class="menu-item">
-                <router-link :to="{ name: 'setting'}"
-                             tag="div">
-                    <div class="left">
-                        <i class="iconfont icon-shoucang2"></i>设置
-                    </div>
-                </router-link>
-            </div>
-        </div>
-
-        <div class="menu-group">
-            <div class="menu-title">我的音乐</div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-shoucang hot"></i>我喜欢</div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-screen"></i>本地和下载</div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-lishi"></i>播放历史</div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-shiting"></i>试听列表</div>
-            </div>
-        </div>
-
-        <div class="menu-group">
-            <div class="menu-title">
-                <div class="left">信息</div>
-                <div class="right">
-                    <i class="iconfont icon-jia-copy"></i>
-                    <i class="iconfont icon-xiangxia"></i>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-yinyue"></i>bilibili</div>
-            </div>
-        </div>
-
-        <div class="menu-group">
-            <div class="menu-title">
-                <div class="left">我收藏的歌单</div>
-                <div class="right">
-                    <i class="iconfont icon-xiangxia"></i>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="left">
-                    <i class="iconfont icon-yinyue"></i>Convoy</div>
-            </div>
-        </div>
 
         <div class="menu-group"
              v-if="menuData"
@@ -82,15 +8,18 @@
             <div class="menu-title">
                 <div class="left">{{ menu.title }}</div>
                 <div class="right">
-                    <i class="iconfont icon-xiangxia"></i>
+                    <i :class="menu.icon"
+                       class="iconfont"></i>
                 </div>
             </div>
             <div class="menu-item"
+                 :class="{active :active == menuItem.name }"
                  @click="handleClick(menuItem)"
                  v-for="(menuItem, idx) in menu.subMenu"
                  :key="idx">
                 <div class="left">
-                    <i class="iconfont icon-yinyue"></i>{{ menuItem.name }} </div>
+                    <i :class="menuItem.icon"
+                       class="iconfont "></i>{{ menuItem.name }} </div>
             </div>
         </div>
 
@@ -104,20 +33,76 @@ export default {
         return {
             menuData: [
                 {
+                    title: '在线音乐',
+                    // icon: 'icon-xiangxia',
+                    subMenu: [
+                        {
+                            name: '音乐',
+                            index: 'music',
+                            icon: 'icon-yinyue'
+                        },
+                        {
+                            name: '哔哩哔哩',
+                            index: 'bilibili',
+                            icon: 'icon-mv'
+                        },
+                        {
+                            name: '个性电台',
+                            index: 'diantai',
+                            icon: 'icon-diantai'
+                        },
+                        {
+                            name: '设置',
+                            index: 'setting',
+                            icon: 'icon-yinyue'
+                        }
+                    ]
+                },
+                {
+                    title: '我的音乐',
+                    // icon: 'icon-xiangxia',
+                    subMenu: [
+                        {
+                            name: '我喜欢',
+                            index: 'music',
+                            icon: 'icon-shoucang hot'
+                        },
+                        {
+                            name: '本地和下载',
+                            index: 'screen',
+                            icon: 'icon-screen'
+                        },
+                        {
+                            name: '播放历史',
+                            index: 'lishi',
+                            icon: 'icon-lishi'
+                        },
+                        {
+                            name: '试听列表',
+                            index: 'shiting',
+                            icon: 'icon-shiting'
+                        }
+                    ]
+                },
+                {
                     title: '测试',
+                    // icon: 'icon-xiangxia',
                     subMenu: [
                         {
                             name: '测试',
-                            index: 'test'
+                            index: 'setting',
+                            icon: 'icon-yinyue'
                         }
                     ]
                 }
-            ]
+            ],
+            active: '音乐'
         }
     },
     methods: {
         handleClick(menuItem) {
-            console.log('handleClick', menuItem.index)
+            this.active = menuItem.name
+            this.$emit('click-item', menuItem.index)
         }
     }
 }
@@ -137,7 +122,7 @@ export default {
 
         .menu-group {
             margin-bottom: 25px;
-            padding: 0 20px;
+            padding: 0 15px;
             .menu-title {
                 margin-bottom: 10px;
                 font-size: 12px;

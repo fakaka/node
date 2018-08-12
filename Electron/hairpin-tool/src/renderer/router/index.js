@@ -17,6 +17,11 @@ export default new Router({
                     component: () => import('../views/music/index.vue')
                 },
                 {
+                    path: 'bilibili',
+                    name: 'bilibili',
+                    component: () => import('../views/bilibili')
+                },
+                {
                     path: 'playlist-detail',
                     name: 'playlist-detail',
                     component: () => import('../views/playlist/detail')

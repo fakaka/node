@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
     @import url(./assets/styles/public.scss);
+    @import url(./assets/styles/common.scss);
     body {
         padding: 0;
         margin: 0;

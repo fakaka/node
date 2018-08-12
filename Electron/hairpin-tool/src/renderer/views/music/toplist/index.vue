@@ -5,31 +5,26 @@
 </template>
 
 <script>
+import toplist from './components/toplist'
 
-    import toplist from './components/toplist'
-
-    export default {
-        components: {
-    
-            toplist
-        }
+export default {
+    components: {
+        toplist
     }
+}
 </script>
 
 <style lang="scss" scoped>
     .scroll-page {
         overflow: hidden;
-        background:#fafafa;
+        background: #fafafa;
 
         /deep/ .el-scrollbar__wrap {
             overflow-x: hidden;
         }
-
-
     }
     .toplist-view {
         flex: 1;
         overflow: hidden;
-
     }
 </style>

@@ -244,7 +244,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $height: 70px;
+    $height: 60px;
     .player {
         display: flex;
         align-items: center;

@@ -8,7 +8,7 @@
 
 
                 <div class="right">
-                    <div v-for="(item,index) in topdata.tracks.slice(0,3)">
+                    <div v-for="(item,index) in topdata.tracks.slice(0,3)" :key="index" v-if="topdata && topdata.tracks">
                         <div :key="index"  @click="itemClick" class="song-item">{{index+1}}  {{item.name}} <span class="gray">- {{item.ar[0].name}}</span></div>
                     </div>
 
@@ -40,7 +40,7 @@ export default{
 	methods:{
 		getToplist(id){
 			toplist(id).then(res=>{
-//				console.log('---toplist ',id,res)
+				console.log('---toplist ',id,res)
                 this.topdata=res.playlist
 			})
 		},

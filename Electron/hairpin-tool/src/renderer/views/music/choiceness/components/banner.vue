@@ -33,7 +33,7 @@
         .el-carousel__item {
             .carousel-item-image {
                 background-size: cover;
-                // width: 445px;
+                width: 445px;
                 height: 200px;
                 background-position: 50% 50%;
             }

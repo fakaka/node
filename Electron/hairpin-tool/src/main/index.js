@@ -33,7 +33,7 @@ function createWindow() {
         minWidth: 1020,
         minHeight: 670,
         // transparent: true,
-        opacity: 0.96,
+        // opacity: 0.96,
         hasShadow: true,
         title: '发 卡'
     })

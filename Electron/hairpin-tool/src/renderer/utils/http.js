@@ -1,7 +1,5 @@
 import axios from 'axios'
-import {
-    Message
-} from 'element-ui';
+import { Message } from 'element-ui'
 // 创建axios实例
 const service = axios.create({
     withCredentials: true,
@@ -10,35 +8,36 @@ const service = axios.create({
     timeout: 15000 // 请求超时时间
 })
 
-service.interceptors.request.use(config => {
-    //config.headers['Accept'] = 'application/json'
-    return config
-}, error => {
-    Promise.reject(error)
-})
+service.interceptors.request.use(
+    config => {
+        //config.headers['Accept'] = 'application/json'
+        return config
+    },
+    error => {
+        Promise.reject(error)
+    }
+)
 
 // respone拦截器
 service.interceptors.response.use(
     response => {
-        if (response.data.code !== 200) {
+        if (response.data.code !== 200 && response.data.code !== 0) {
             switch (response.data.code) {
                 case 401: // 用户未登录
-                    break;
+                    break
                 default:
-                    console.log(response.data.msg);
+                    console.log(response.data.msg)
                     Message({
                         message: response.data.msg || '未知错误',
                         type: 'error',
                         center: true
                     })
-                    break;
+                    break
             }
             return Promise.reject(response)
         } else {
             return response.data
         }
-
-
     },
     error => {
         if (error.response) {

@@ -6,28 +6,21 @@
                          name="choiceness">
                 <choiceness />
             </el-tab-pane>
-            <el-tab-pane label="歌手"
-                         name="singer">
-                <singer />
-            </el-tab-pane>
             <el-tab-pane label="排行"
                          name="toplist">
                 <toplist />
             </el-tab-pane>
-            <el-tab-pane label="电台"
-                         name="dj">
-                <dj />
+            <el-tab-pane label="歌手"
+                         name="singer">
+                <singer />
             </el-tab-pane>
-            <el-tab-pane label="分类歌单"
+            <el-tab-pane label="歌单"
                          name="playlist">
                 <playlist />
             </el-tab-pane>
-            <el-tab-pane label="有声"
-                         name="ys"></el-tab-pane>
-            <el-tab-pane label="数字专辑"
-                         name="szzj"></el-tab-pane>
         </el-tabs>
         <div class="music-body">
+            <!-- <toplist v-if="activeName == 'toplist'" /> -->
         </div>
     </div>
 </template>
@@ -36,14 +29,13 @@ import choiceness from './choiceness'
 import playlist from './playlist'
 import toplist from './toplist'
 import singer from './singer'
-import dj from './dj'
+
 export default {
     components: {
         choiceness,
         playlist,
         toplist,
-        singer,
-        dj
+        singer
     },
     data() {
         return {
@@ -63,8 +55,9 @@ export default {
         flex: 1;
         flex-direction: column;
         /deep/ .el-tabs {
-            height: 40px;
+            height: 100%;
             background: #fafafa;
+            overflow: auto;
             .el-tabs__header {
                 padding: 0;
                 margin: 0;
