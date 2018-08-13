@@ -22,6 +22,11 @@ export default new Router({
                     component: () => import('../views/bilibili')
                 },
                 {
+                    path: 'monitor',
+                    name: 'monitor',
+                    component: () => import('../views/monitor')
+                },
+                {
                     path: 'playlist-detail',
                     name: 'playlist-detail',
                     component: () => import('../views/playlist/detail')

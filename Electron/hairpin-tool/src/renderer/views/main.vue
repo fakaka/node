@@ -9,7 +9,7 @@
                 </el-aside>
                 <el-container>
                     <el-header class="header"
-                               height="40"
+                               height="35"
                                style="-webkit-app-region: drag">
                         <header-view />
                     </el-header>

@@ -1,12 +1,14 @@
 <template>
     <div class="header-view" :style="{height: height}">
         <div class="left flex-c-l">
-            <el-button class="no-drag" size="mini" type="text" @click="back">
-                <i class="btn el-icon-arrow-left"></i>
-            </el-button>
-            <el-button class="no-drag" size="mini" type="text" @click="advance">
-                <i class="btn el-icon-arrow-right"></i>
-            </el-button>
+            <el-button-group class="back_advance">
+                <el-button class="no-drag" size="mini" @click="back">
+                    <i class="btn el-icon-arrow-left"></i>
+                </el-button>
+                <el-button class="no-drag" size="mini" @click="advance">
+                    <i class="btn el-icon-arrow-right"></i>
+                </el-button>
+            </el-button-group>
             <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
                 <i class="btn el-icon-refresh"></i>
             </el-button>
@@ -37,7 +39,7 @@
         props: {
             height: {
                 type: String,
-                default: '50px'
+                default: '45px'
             }
         },
         methods: {
@@ -81,6 +83,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .back_advance {
+            margin-right: 5px;
+            .el-button--mini {
+                padding: 1px 5px;
+            }   
+        }
         /deep/ .left {
             .btn {
                 font-size: 17px;

@@ -1,5 +1,5 @@
 <template>
-    <div style="position: relative;"
+    <div style="position: relative;height:100%"
          v-if="bannerImg">
         <!-- <a href="https://www.bilibili.com/" target="_blank">
             <img :src="bannerImg" alt="">
@@ -50,13 +50,14 @@ export default {
 
 <style scoped>
     .bgImg {
+        height: 100%;
         background-image: url('http://i0.hdslb.com/bfs/archive/0ac04c23af3b3297bf02dca163474326898d211d.png');
         background-position: 50% 50%;
     }
     .search {
         position: absolute;
         bottom: 20px;
-        right: 0;
+        right: 10px;
         width: 268px;
         height: 32px;
         padding: 2px 2px 2px 72px;
@@ -91,6 +92,11 @@ export default {
         box-shadow: none;
         background-color: transparent;
     }
+
+    .search .search-keyword:focus {
+        outline: none;
+    }
+
     .search button.search-submit {
         display: block;
         position: absolute;
@@ -99,10 +105,10 @@ export default {
         min-width: 0;
         cursor: pointer;
         height: 32px;
-        background: url(//static.hdslb.com/images/base/icons.png) -646px -721px;
+        background: url(//static.hdslb.com/images/base/icons.png) -650px -720px;
     }
     .search button.search-submit:hover {
-        background-position: -711px -721px;
+        background-position: -715px -720px;
     }
     .search .link-ranking {
         position: absolute;

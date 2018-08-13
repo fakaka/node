@@ -47,8 +47,8 @@ export default {
                             icon: 'icon-mv'
                         },
                         {
-                            name: '个性电台',
-                            index: 'diantai',
+                            name: '性能监控',
+                            index: 'monitor',
                             icon: 'icon-diantai'
                         },
                         {
@@ -122,10 +122,10 @@ export default {
 
         .menu-group {
             margin-bottom: 25px;
-            padding: 0 15px;
+            padding: 0 10px;
             .menu-title {
-                margin-bottom: 10px;
-                font-size: 12px;
+                margin-bottom: 5px;
+                font-size: 11px;
                 padding-left: 10px;
                 display: flex;
                 align-items: center;
@@ -134,7 +134,7 @@ export default {
                     flex: 1;
                 }
                 .right {
-                    width: 80px;
+                    width: 95px;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
@@ -146,10 +146,10 @@ export default {
                 }
             }
             .menu-item {
-                padding: 5px 10px;
-                font-size: 13px;
+                padding: 3px 10px;
+                font-size: 12px;
                 border-radius: 2px;
-                margin-bottom: 5px;
+                margin-bottom: 3px;
                 cursor: pointer;
                 .left {
                     .iconfont {
@@ -165,7 +165,7 @@ export default {
             }
 
             .menu-item.active {
-                background: #31c27c;
+                background: rgba(49, 194, 124, 0.88);
                 color: #fff;
             }
         }

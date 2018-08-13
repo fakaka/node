@@ -1,12 +1,23 @@
 <template>
     <div class="user-info">
-        <div class="avatar no-drag"
-             @click="login">
-            <img v-if="user.is_login"
-                 :src="user.profile.avatarUrl" />
-            <img v-else
-                 src="../../assets/images/max.png">
-        </div>
+        <el-popover title="标题"
+                    width="134"
+                    trigger="hover"
+                    placement="bottom">
+            <div class="avatar no-drag"
+                 slot="reference"
+                 @click="login">
+                <img v-if="user.is_login"
+                     :src="user.profile.avatarUrl" />
+                <img v-else
+                     src="../../assets/images/avatar.jpg">
+            </div>
+
+            <div>
+                这是一段内容,这是一段内容,这是一段内容,这是一段内容。
+            </div>
+        </el-popover>
+
         <div class="mt-5">
             <el-button style="color: #555;"
                        type="text"
@@ -48,8 +59,8 @@ export default {
         justify-content: center;
         align-items: center;
         .avatar {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             img {
                 width: 100%;
                 height: 100%;

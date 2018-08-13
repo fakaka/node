@@ -29,11 +29,11 @@ function createWindow() {
         titleBarStyle: 'hidden',
         resizable: true,
         width: 1020,
-        height: 670,
+        height: 671,
         minWidth: 1020,
-        minHeight: 670,
+        minHeight: 671,
         // transparent: true,
-        // opacity: 0.96,
+        opacity: 0.98,
         hasShadow: true,
         title: '发 卡'
     })
