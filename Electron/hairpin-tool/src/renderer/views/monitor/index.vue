@@ -1,30 +1,35 @@
 <template>
-    <div class="monitor">
-        <div id="box_body">
-            <div class="urge_item">CPU Usage</div>
-            <div class="chart">
-                <canvas id="cpu_total"
-                        width="100"
-                        height="100"></canvas>
-                <canvas id="cpu_history"
-                        width="400"
-                        height="100"></canvas>
+    <el-scrollbar style="width:100%">
+        <div class="monitor">
+            <div id="box_body">
+                <div class="urge_item">CPU Usage</div>
+                <div class="chart">
+                    <canvas id="cpu_total"
+                            width="100"
+                            height="100"></canvas>
+                    <canvas id="cpu_history"
+                            width="400"
+                            height="100"></canvas>
+                </div>
+                <div class="urge_item">Memory Usage</div>
+                <div class="chart">
+                    <canvas id="mem_total"
+                            width="100"
+                            height="100"></canvas>
+                    <canvas id="mem_history"
+                            width="400"
+                            height="100"></canvas>
+                </div>
             </div>
-            <div class="urge_item">Memory Usage</div>
-            <div class="chart">
-                <canvas id="mem_total"
-                        width="100"
-                        height="100"></canvas>
-                <canvas id="mem_history"
-                        width="400"
-                        height="100"></canvas>
-            </div>
+            cpu>
+            <cpu></cpu>
         </div>
-    </div>
+    </el-scrollbar>
 </template>
 
 <script>
 import Chart from 'chart.js'
+import Cpu from './cpu'
 
 export default {
     name: 'monitor',
@@ -121,16 +126,56 @@ export default {
             ]
             var his_ctx = document.getElementById('cpu_history').getContext('2d')
             var now_ctx = document.getElementById('cpu_total').getContext('2d')
+            let cpu_chart_line2 = {}
             if (!this.cpu_chart_line || !this.cpu_chart_pie) {
-                this.cpu_chart_line = new Chart(his_ctx)
+                cpu_chart_line2 = new Chart(his_ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [
+                            {
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [
+                                {
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                })
                 // cpu_chart_pie = new Chart(now_ctx)
             }
-            console.log( this.cpu_chart_line)
-            this.cpu_chart_line.Line(history, {
-                scaleFontSize: 4,
-                pointDot: false,
-                animation: false
-            })
+            console.log(this.cpu_chart_line)
+            // cpu_chart_line2.Line(history, {
+            //     scaleFontSize: 4,
+            //     pointDot: false,
+            //     animation: false
+            // })
             // cpu_chart_pie.Pie(now, { segmentShowStroke: false, animation: false })
         },
         showMem() {
@@ -171,14 +216,18 @@ export default {
         this.init_cpu_history()
         this.init_mem_history()
 
-this.updateData()
+        this.updateData()
         // setInterval(this.updateData, 1000)
+    },
+    components: {
+        Cpu
     }
 }
 </script>
 
 <style scoped>
     .monitor {
+        width: 100%;
         background: #fafafa;
     }
     #box_body {
