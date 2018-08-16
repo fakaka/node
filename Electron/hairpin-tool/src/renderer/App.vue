@@ -17,6 +17,7 @@ export default {
         padding: 0;
         margin: 0;
         padding-right: 0 !important;
+        user-select: none;
         -webkit-user-select: none;
         height: 800px;
         overflow: hidden;

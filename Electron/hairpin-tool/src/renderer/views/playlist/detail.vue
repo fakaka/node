@@ -1,58 +1,80 @@
 <template>
-    <el-scrollbar class="playlist-detail scroll-page" v-loading="loading">
+    <el-scrollbar class="playlist-detail scroll-page"
+                  v-loading="loading">
         <template v-if="playlist && show">
             <div class="top">
                 <div class="cover">
-                    <img :src="playlist.coverImgUrl"/>
+                    <img :src="playlist.coverImgUrl" />
                 </div>
                 <div class="info">
                     <div class="title">{{playlist.name}}</div>
                     <div class="author">
-                        <img :src="playlist.creator.avatarUrl"/>
+                        <img :src="playlist.creator.avatarUrl" />
                         <span>{{playlist.creator.nickname}}</span>
                     </div>
                     <div class="desc line-1">{{playlist.description}}</div>
                     <div class="actions">
-                        <el-button @click="playAll" size="mini" type="primary" icon="iconfont icon-bofangsanjiaoxing">播放全部</el-button>
-                        <el-button size="mini" icon="iconfont icon-shoucang">收藏</el-button>
-                        <el-button size="mini" icon="iconfont icon-xiazai2">下载</el-button>
-                        <el-button size="mini" icon="iconfont icon-piliangcaozuo">批量操作</el-button>
-                        <el-button size="mini" icon="iconfont icon-20">分享</el-button>
+                        <el-button @click="playAll"
+                                   size="mini"
+                                   type="primary"
+                                   icon="iconfont icon-bofangsanjiaoxing">播放全部</el-button>
+                        <el-button size="mini"
+                                   icon="iconfont icon-shoucang">收藏</el-button>
+                        <el-button size="mini"
+                                   icon="iconfont icon-xiazai2">下载</el-button>
+                        <el-button size="mini"
+                                   icon="iconfont icon-piliangcaozuo">批量操作</el-button>
+                        <el-button size="mini"
+                                   icon="iconfont icon-20">分享</el-button>
                     </div>
                 </div>
             </div>
             <div class="tracks">
                 <div class=""></div>
                 <div class="list">
-                    <el-table size="small" :data="playlist.tracks">
+                    <el-table size="small"
+                              :data="playlist.tracks">
                         <el-table-column label="歌曲">
                             <template slot-scope="scope">
                                 <div class="name-row">
                                     <div class="left">
-                                        <i @click="likeMusic(scope.row)" class="shoucang iconfont icon-shoucang"></i>
+                                        <i @click="likeMusic(scope.row)"
+                                           class="shoucang iconfont icon-shoucang"></i>
                                         <span>{{scope.row.name}}</span>
-                                        <img class="tag" src="../../assets/images/sq.png"/>
-                                        <img v-if="scope.row.mv>0" class="tag" src="../../assets/images/mv.png"/>
+                                        <img class="tag"
+                                             src="../../assets/images/sq.png" />
+                                        <img v-if="scope.row.mv>0"
+                                             class="tag"
+                                             src="../../assets/images/mv.png" />
                                     </div>
                                     <div class="btns">
-                                        <i class="iconfont icon-zanting play" @click="play(scope.row)"></i>
+                                        <i class="iconfont icon-zanting play"
+                                           @click="play(scope.row)"></i>
                                         <i class="iconfont icon-gengduo more"></i>
                                     </div>
                                 </div>
 
                             </template>
                         </el-table-column>
-                        <el-table-column width="200" label="歌手" prop="ar[0].name">
+                        <el-table-column width="200"
+                                         label="歌手"
+                                         prop="ar[0].name">
                             <template slot-scope="scope">
-                                <span style="width: 140px;" class="line-1 hover">{{scope.row.ar[0].name}}</span>
+                                <span style="width: 140px;"
+                                      class="line-1 hover">{{scope.row.ar[0].name}}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column width="200" label="专辑" prop="al.name">
+                        <el-table-column width="200"
+                                         label="专辑"
+                                         prop="al.name">
                             <template slot-scope="scope">
-                                <span style="width: 190px;" class="line-1 hover">{{scope.row.al.name}}</span>
+                                <span style="width: 190px;"
+                                      class="line-1 hover">{{scope.row.al.name}}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column width="60" label="时长" prop="dt">
+                        <el-table-column width="60"
+                                         label="时长"
+                                         prop="dt">
                             <template slot-scope="scope">
                                 <span>{{scope.row.dt|formatDuring}}</span>
                             </template>
@@ -66,61 +88,58 @@
 </template>
 
 <script>
-    import {getPlaylistDetail, like} from "../../api";
+import { getPlaylistDetail, like } from '../../api'
 
-    export default {
-        data() {
-            return {
-                id: '',
-                loading: true,
-                show: false,
-                playlist: false
-            }
-        },
-        mounted() {
-            this.$bus.$on('page-refresh', name => {
-                if (name === 'playlist-detail') {
-                    this.getData()
-                }
-            });
-        },
-        activated() {
-            let id = this.$route.query.id;
-            if (id !== this.id) {
-                this.id = id;
+export default {
+    data() {
+        return {
+            id: '',
+            loading: true,
+            show: false,
+            playlist: false
+        }
+    },
+    mounted() {
+        this.$bus.$on('page-refresh', name => {
+            if (name === 'playlist-detail') {
                 this.getData()
-            } else {
+            }
+        })
+    },
+    activated() {
+        let id = this.$route.query.id
+        if (id !== this.id) {
+            this.id = id
+            this.getData()
+        } else {
+            this.show = true
+        }
+    },
+    deactivated() {
+        this.show = false
+    },
+    methods: {
+        getData() {
+            this.loading = true
+            getPlaylistDetail(this.id).then(res => {
+                this.playlist = res.playlist
                 this.show = true
-            }
+                this.loading = false
+            })
         },
-        deactivated() {
-            this.show = false
+        likeMusic(item) {
+            like(item.id).then(res => {})
         },
-        methods: {
-            getData() {
-                this.loading = true
-                getPlaylistDetail(this.id).then(res => {
-                    this.playlist = res.playlist;
-                    this.show = true
-                    this.loading = false
-                })
-            },
-            likeMusic(item) {
-                like(item.id).then(res => {
-
-                })
-            },
-            play(item) {
-                //console.log(item.id)
-                this.$store.dispatch('playMusic',item.id);
-                this.$store.commit('SET_PLAYER_LIST', this.playlist.tracks);
-            },
-            playAll(){
-                this.$store.dispatch('playPlaylist',this.playlist.id)
-
-            }
+        play(item) {
+            //console.log(item.id)
+            this.$store.dispatch('playMusic', item.id)
+            this.$store.commit('SET_PLAYER_LIST', this.playlist.tracks)
+        },
+        playAll() {
+            this.$store.dispatch('playPlaylist', this.playlist.id)
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -232,7 +251,6 @@
                             display: none;
                         }
                     }
-
                 }
             }
         }

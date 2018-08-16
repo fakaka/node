@@ -144,15 +144,16 @@
                 try {
                     return this.song.al.picUrl;
                 } catch (e) {
-                    return 'http://p1.music.126.net/dPn_6T9d5VUuCDvhJdZ_8A==/109951163399691488.jpg'
+                    return 'http://p1.music.126.net/PXE9MfYCgnjHz1vkrpUywQ==/109951163290871736.jpg'
                 }
 
             },
             name() {
+                let defaultName = 'XX音乐，畅听无限'
                 try {
-                    return this.song.name || '土狗音乐，畅听无限'
+                    return this.song.name || defaultName
                 } catch (e) {
-                    return '土狗音乐，畅听无限'
+                    return defaultName
                 }
             },
             ar_name() {

@@ -2,10 +2,10 @@
     <div class="header-view" :style="{height: height}">
         <div class="left flex-c-l">
             <el-button-group class="back_advance">
-                <el-button class="no-drag" size="mini" @click="back">
+                <el-button class="no-drag hover-color" size="mini" @click="back">
                     <i class="btn el-icon-arrow-left"></i>
                 </el-button>
-                <el-button class="no-drag" size="mini" @click="advance">
+                <el-button class="no-drag " size="mini" @click="advance">
                     <i class="btn el-icon-arrow-right"></i>
                 </el-button>
             </el-button-group>

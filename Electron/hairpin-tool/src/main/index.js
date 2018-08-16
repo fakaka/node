@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu } from 'electron'
 
 /**
  * Set `__static` path to static files in production
@@ -43,6 +43,28 @@ function createWindow() {
     mainWindow.on('closed', () => {
         mainWindow = null
     })
+
+    const dockMenu = Menu.buildFromTemplate([
+        {
+            label: '播放 / 暂停'
+        },
+        {
+            type: 'separator'
+        },
+        {
+            label: '上一首',
+            click() {
+                console.log('New Window')
+            }
+        },
+        { label: '下一首' }
+        // {
+        //     label: 'New Window with Settings',
+        //     submenu: [{ label: 'Basic' }, { label: 'Pro' }]
+        // },
+    ])
+
+    app.dock.setMenu(dockMenu)
 }
 
 app.on('ready', createWindow)

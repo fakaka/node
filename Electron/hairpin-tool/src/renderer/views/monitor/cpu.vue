@@ -1,5 +1,8 @@
 <template>
     <div class="left-bar">
+        <el-button @click="open">
+            ss
+        </el-button>
         <article class="base">
             <header class="head">
                 <!-- <Icon type="monitor"
@@ -93,6 +96,7 @@
 <script>
 import os from 'os'
 import { setInterval, clearTimeout } from 'timers'
+import { shell } from 'electron'
 // import wmic from 'node-wmic'
 export default {
     data() {
@@ -147,6 +151,10 @@ export default {
             this.timer = setTimeout(() => {
                 this.getOSInfo()
             }, 1500)
+        },
+        open() {
+            shell.openExternal('http://electron.atom.io')
+            shell.beep()
         }
     },
     watch: {},
