@@ -32,6 +32,16 @@ export default new Router({
                     component: () => import('../views/playlist/detail')
                 },
                 {
+                    path: 'like',
+                    name: 'like',
+                    component: () => import('../views/like')
+                },
+                {
+                    path: 'news',
+                    name: 'news',
+                    component: () => import('../views/news')
+                },
+                {
                     path: 'setting',
                     name: 'setting',
                     component: () => import('../views/setting')

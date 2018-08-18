@@ -58,7 +58,8 @@
         "vue-router": "^2.5.3",
         "vue2-better-scroll": "^1.0.7",
         "vuex": "^2.3.1",
-        "chart.js": "^2.7.2"
+        "chart.js": "^2.7.2",
+        "vuedraggable": "^2.16.0"
     },
     "devDependencies": {
         "babel-core": "^6.25.0",

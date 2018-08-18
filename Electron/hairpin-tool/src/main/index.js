@@ -44,27 +44,29 @@ function createWindow() {
         mainWindow = null
     })
 
-    const dockMenu = Menu.buildFromTemplate([
-        {
-            label: '播放 / 暂停'
-        },
-        {
-            type: 'separator'
-        },
-        {
-            label: '上一首',
-            click() {
-                console.log('New Window')
-            }
-        },
-        { label: '下一首' }
-        // {
-        //     label: 'New Window with Settings',
-        //     submenu: [{ label: 'Basic' }, { label: 'Pro' }]
-        // },
-    ])
+    if (process.platform == 'darwin') {
+        const dockMenu = Menu.buildFromTemplate([
+            {
+                label: '播放 / 暂停'
+            },
+            {
+                type: 'separator'
+            },
+            {
+                label: '上一首',
+                click() {
+                    console.log('New Window')
+                }
+            },
+            { label: '下一首' }
+            // {
+            //     label: 'New Window with Settings',
+            //     submenu: [{ label: 'Basic' }, { label: 'Pro' }]
+            // },
+        ])
 
-    app.dock.setMenu(dockMenu)
+        app.dock.setMenu(dockMenu)
+    }
 }
 
 app.on('ready', createWindow)

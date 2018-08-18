@@ -64,7 +64,7 @@ export default {
                     subMenu: [
                         {
                             name: '我喜欢',
-                            index: 'music',
+                            index: 'like',
                             icon: 'icon-shoucang hot'
                         },
                         {
@@ -78,8 +78,8 @@ export default {
                             icon: 'icon-lishi'
                         },
                         {
-                            name: '试听列表',
-                            index: 'shiting',
+                            name: '新闻资讯',
+                            index: 'news',
                             icon: 'icon-shiting'
                         }
                     ]

@@ -34,48 +34,46 @@
 </template>
 
 <script>
-    // const {BrowserWindow} = require('electron')
-    export default {
-        props: {
-            height: {
-                type: String,
-                default: '45px'
+// const {BrowserWindow} = require('electron')
+export default {
+    props: {
+        height: {
+            type: String,
+            default: '45px'
+        }
+    },
+    methods: {
+        back() {
+            if (this.$route.name !== 'music') {
+                this.$router.go(-1)
             }
         },
-        methods: {
-            back() {
-                if (this.$route.name !== 'music') {
-                    this.$router.go(-1)
-                }
-            },
-            advance() {
-                this.$router.go(1)
-            },
-            refresh() {
-                this.$bus.$emit('page-refresh', this.$route.name) 
-            },
-            minimize() {
-                this.$electron.ipcRenderer.send('minimize')
-            },
-            message(){
-
-            },
-            setting(){
-                this.$router.push('setting')
-            },
-            close() {
-                this.$confirm('关闭发卡工具箱, 是否继续?', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
-                    type: 'warning'
-                }).then(() => {
+        advance() {
+            this.$router.go(1)
+        },
+        refresh() {
+            this.$bus.$emit('page-refresh', this.$route.name)
+        },
+        minimize() {
+            this.$electron.ipcRenderer.send('minimize')
+        },
+        message() {},
+        setting() {
+            this.$router.push('setting')
+        },
+        close() {
+            this.$confirm('关闭发卡工具箱, 是否继续?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            })
+                .then(() => {
                     this.$electron.ipcRenderer.send('close')
-                }).catch(() => {
-
                 })
-            },
+                .catch(() => {})
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -87,7 +85,7 @@
             margin-right: 5px;
             .el-button--mini {
                 padding: 1px 5px;
-            }   
+            }
         }
         /deep/ .left {
             .btn {
