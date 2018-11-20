@@ -2,6 +2,9 @@
     <div>
         <div class="title">Information</div>
         <button @click="notify">notify</button>
+        <el-tooltip content="Top center" placement="top">
+            <el-button>Dark</el-button>
+        </el-tooltip>
     </div>
 </template>
 

@@ -1,0 +1,12 @@
+{
+    "name": "hairpin-crawler",
+    "version": "0.0.1",
+    "author": "mj",
+    "description": "This is a crawler app!",
+    "dependencies": {
+        "request": "^2.88.0",
+        "querystring": "^0.2.0",
+        "mysql": "^2.16.0",
+        "cheerio": "^1.0.0-rc.2"
+    }
+}
