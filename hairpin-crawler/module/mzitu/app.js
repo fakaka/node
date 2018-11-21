@@ -17,7 +17,8 @@ var headers = {
 var mziTu = 'http://www.mzitu.com/all'
 
 // 定义存储位置
-var basePath = 'E:\\Pic\\mzitu\\'
+// var basePath = 'E:\\Pic\\mzitu\\'
+var basePath = '/Users/mengjian/Code/Pic/mzitu'
 
 exports.start = start
 
@@ -43,7 +44,7 @@ async function start() {
         year = yearElem.text()
 
         console.log('---创建文件夹---', year)
-        createFolder('E:\\Pic\\mzitu\\' + year)
+        createFolder(path.join(basePath, year))
 
         monthsEle = yearElem.next().find('.month')
 
@@ -55,7 +56,7 @@ async function start() {
             const monElem = monthsEle.eq(j)
             var month = monElem.text()
             console.log('---创建文件夹---', month)
-            createFolder('E:\\Pic\\mzitu\\' + year + '\\' + month)
+            createFolder(path.join(basePath, year, month))
 
             var list = monElem.next().children()
 
