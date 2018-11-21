@@ -17,7 +17,7 @@ var headers = {
 var mziTu = 'http://www.mzitu.com/all'
 
 // 定义存储位置
-var save_path = '/mnt/data/mzitu'
+var basePath = 'E:\\Pic\\mzitu\\'
 
 exports.start = start
 
@@ -26,50 +26,63 @@ async function start() {
         headers: headers
     }
 
-    axios.get(mziTu, options).then(resp => {
-        // console.log(resp.data)
-        const $ = cheerio.load(resp.data)
+    var resp = await axios.get(mziTu, options)
+    // console.log(resp.data)
+    const $ = cheerio.load(resp.data)
 
-        console.log('=============')
-        var yearsEle = $('.year')
-        // console.log(years.text())
+    console.log('====== 开始 =======')
+    var yearsEle = $('.year')
+    // console.log(years.text())
 
-        year = yearsEle.eq(0).text()
-        monthsEle = yearsEle
-            .eq(0)
-            .next()
-            .find('.month')
-        // yearsEle.each(function(i, elem) {
-        //     var year = $(this).text()
-        //     console.log(year)
-        //     console.log('---创建文件夹---', year)
-        //     // createFolder('E:\\Pic\\mzitu\\' + year)
-        //     var monthsEle = $(this)
-        //         .next()
-        //         .find('.month')
+    for (let i = 0; i < yearsEle.length; i++) {
+        if (i < 2) {
+            continue
+        }
 
-        monthsEle.each(function(j, monElem) {
-            var month = $(this).text()
+        var yearElem = yearsEle.eq(i)
+        year = yearElem.text()
+
+        console.log('---创建文件夹---', year)
+        createFolder('E:\\Pic\\mzitu\\' + year)
+
+        monthsEle = yearElem.next().find('.month')
+
+        for (let j = 0; j < monthsEle.length; j++) {
+            // if (i < 2 && j < 9) {
+            //     continue
+            // }
+
+            const monElem = monthsEle.eq(j)
+            var month = monElem.text()
             console.log('---创建文件夹---', month)
             createFolder('E:\\Pic\\mzitu\\' + year + '\\' + month)
 
-            var list = $(this)
-                .next()
-                .children()
+            var list = monElem.next().children()
 
-            list.each(function(k, dayElem) {
-                var pageUrl = $(this).attr('href')
+            for (let k = 0; k < list.length; k++) {
+                const dayElem = list.eq(k)
+                var pageUrl = dayElem.attr('href')
                 if (pageUrl) {
-                    var folderName = $(this).text()
+                    var folderName = dayElem.text()
                     // 格式化文件名
+                    folderName = folderName.replace(':', ' ').replace('?', ' ')
                     // folderName = normaize(folderName)
                     // path.join()
-                    downloadImages('E:\\Pic\\mzitu\\' + year + '\\' + month + '\\' + folderName, pageUrl)
+                    var folderPath = path.join(basePath, year, month, folderName)
+                    createFolder(folderPath)
+                    await downloadImages(folderPath, pageUrl)
+                    console.log('( ' + folderName + ' )文件夹图片抓取完成。等待 1.5s 抓取下一个图集')
+                    await sleep(1500)
                 }
-            })
-        })
-        // })
-    })
+            }
+            console.log('[ ' + month + ' ]文件夹图片抓取完成。等待 5s 抓取下一个月')
+            console.log('==========================================')
+            await sleep(8000)
+        }
+        console.log('{ ' + year + ' }文件夹图片抓取完成。等待 10s 抓取下一年')
+        console.log('==========================================')
+        await sleep(15000)
+    }
 }
 
 // 创建文件夹
@@ -81,67 +94,45 @@ function createFolder(file_path) {
 
 // 下载文件
 
-function downloadImages(folder_path, page_url) {
-    axios.get(page_url, { headers }).then(async resp => {
-        console.log(resp)
-        // 解析html
-        var $ = cheerio.load(resp.data)
-        var imageUrl = $('.main-image')
-            .find('img')
-            .attr('src')
-        console.log(imageUrl)
+async function downloadImages(folder_path, page_url) {
+    var resp = await axios.get(page_url, { headers })
 
-        //     try {
-        //         // 获取套图的最大数量
-        //         // pic_max = soup_sub_1.find('div', (class_ = 'pagenavi')).find_all('span')[6].text
-        //         // console.log('套图数量：' + pic_max)
-        //         // for j in range(1, int(pic_max) + 1):
-        //         //                 # print("子内页第几页：" + str(j))
-        //         //                 # j int类型需要转字符串
-        //         //                 href_sub = href + "/" + str(j)
-        //         //                 print(href_sub)
-        //         //                 res_sub_2 = requests.get(href_sub, headers=headers)
-        //         //                 soup_sub_2 = BeautifulSoup(res_sub_2.text, "html.parser")
-        //         //                 img = soup_sub_2.find('div', class_='main-image').find('img')
-        //         //                 if isinstance(img, bs4.element.Tag):
-        //         //                     # 提取src
-        //         //                     url = img.attrs['src']
-        //         //                     array = url.split('/')
-        //         //                     file_name = array[len(array)-1]
-        //         //                     // print(file_name)
-        //         // 防盗链加入Referer
-        //         // print('开始保存图片')
+    // console.log(resp)
+    // 解析html
+    var $ = cheerio.load(resp.data)
 
-        let aa = imageUrl.lastIndexOf('/')
-        fileNmae = imageUrl.substring(aa + 1)
+    // 获取套图的最大数量
+    var picNum = $('.pagenavi')
+        .find('span')
+        .eq(6)
+        .text()
+    var imageUrlTemp = $('.main-image')
+        .find('img')
+        .attr('src')
 
-        createFolder(folder_path)
-        downloadImage(imageUrl, folder_path + '\\' + fileNmae)
-        //     } catch (err) {
-        //         console.log(err)
-        //     }
-        // })
-    })
+    // 类似 15d01.jpg
+    var prefix = imageUrlTemp.substring(0, imageUrlTemp.lastIndexOf('/') + 1)
+    var fileNameTemp = imageUrlTemp.substring(imageUrlTemp.lastIndexOf('/') + 1)
+
+    for (let i = 1; i < picNum; i++) {
+        let idx = i
+        if (i < 10) {
+            idx = '0' + i
+        }
+
+        fileName = fileNameTemp.substr(0, 3) + idx + fileNameTemp.substr(5)
+
+        console.log('downloading image: ' + fileName)
+
+        // 防盗链加入Referer
+        headers = { Referer: 'http://www.mzitu.com' }
+
+        request.get(prefix + fileName, { headers }).pipe(fs.createWriteStream(path.join(folder_path, fileName)))
+    }
 }
 
-function downloadImage(url, file) {
-    // return new Promise(function (resolve, reject) {
-    //     headers = { Referer: 'http://www.mzitu.com' }
-    //     var stream = request.get(url, { headers }).pipe(fs.createWriteStream(file))
-    //     stream.on('finish', function() {
-    //         resolve('OK123')
-    //     })
-    // })
-
-    // request({ url: url, encoding: 'binary' }, function(error, response, body) {
-    //     if (!error && response.statusCode == 200) {
-    //         if (!body) console.log('(╥╯^╰╥)哎呀没有内容。。。')
-    //         fs.writeFile(file, body, 'binary', function(err) {
-    //             if (err) {
-    //                 console.log(err)
-    //             }
-    //             console.log('o(*￣▽￣*)o偷偷下载' + dir + '/' + filename + ' done')
-    //         })
-    //     }
-    // })
+async function sleep(time) {
+    return new Promise(resolve => {
+        setTimeout(() => resolve('success'), time)
+    })
 }
