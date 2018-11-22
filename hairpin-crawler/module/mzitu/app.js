@@ -17,8 +17,8 @@ var headers = {
 var mziTu = 'http://www.mzitu.com/all'
 
 // 定义存储位置
-// var basePath = 'E:\\Pic\\mzitu\\'
-var basePath = '/Users/mengjian/Code/Pic/mzitu'
+var basePath = 'E:\\Pic\\mzitu\\'
+// var basePath = '/Users/mengjian/Code/Pic/mzitu'
 
 exports.start = start
 
@@ -36,7 +36,7 @@ async function start() {
     // console.log(years.text())
 
     for (let i = 0; i < yearsEle.length; i++) {
-        if (i < 2) {
+        if (i < 3) {
             continue
         }
 
@@ -72,17 +72,17 @@ async function start() {
                     var folderPath = path.join(basePath, year, month, folderName)
                     createFolder(folderPath)
                     await downloadImages(folderPath, pageUrl)
-                    console.log('( ' + folderName + ' )文件夹图片抓取完成。等待 1.5s 抓取下一个图集')
-                    await sleep(1500)
+                    console.log('( ' + folderName + ' )文件夹图片抓取完成。等待 1s 抓取下一个图集')
+                    await sleep(1000)
                 }
             }
             console.log('[ ' + month + ' ]文件夹图片抓取完成。等待 5s 抓取下一个月')
             console.log('==========================================')
-            await sleep(8000)
+            await sleep(5000)
         }
         console.log('{ ' + year + ' }文件夹图片抓取完成。等待 10s 抓取下一年')
         console.log('==========================================')
-        await sleep(15000)
+        await sleep(10000)
     }
 }
 
