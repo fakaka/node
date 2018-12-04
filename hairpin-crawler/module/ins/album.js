@@ -7,12 +7,13 @@ var request = require('request')
  */
 function getJson(body) {
     if (!body) return ''
-    var regExp = /window._sharedData = .*};/
+    var regExp = /window._sharedData = (.*});/
     var list = regExp.exec(body)
     // 判断是否为空
-    var result = list[0].substr(21)
-    result = result.substr(0, result.length - 1)
-    return result
+    if (list.length == 2) {
+        return list[1]
+    }
+    return '{}'
 }
 
 module.exports = {
@@ -30,7 +31,7 @@ module.exports = {
                 resolve(null)
             }
             var options = {
-                proxy: 'http://mj:1223@localhost:1223',
+                proxy: 'http://mj:1223@localhost:1223'
                 // headers: {
                 //     'Proxy-Authentication': 'Base ' + new Buffer('username:password').toString('base64')
                 // }
